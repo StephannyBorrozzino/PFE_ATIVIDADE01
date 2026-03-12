@@ -26,5 +26,6 @@ function finalizarCompra(){
         alert(`Compra Finalizada com Sucesso! \n Obrigada por compra na Loja Midnight Geek ⭐ \n Total no carrinho: R$ ${totalCarrinho.toFixed(2)}`);
         quantCarrinho = 0;
         totalCarrinho = 0;
+        contadorCarrinho.textContent = quantCarrinho;
     }
 }
