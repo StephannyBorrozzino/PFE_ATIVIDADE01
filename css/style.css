@@ -1,0 +1,174 @@
+:root {
+    --color-brand-100: #FBFCFF;
+    --color-brand-200: #D0CCD0;
+    --color-brand-400: #605856;
+    --color-brand-600: #1C6E8C;
+    --color-brand-700: #274156;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-brand-100);
+}
+
+header {
+    background-color: var(--color-brand-700);
+    color: var(--color-brand-100);
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header div p {
+    font-size: 1.7em;
+    margin-right: 20px;
+}
+
+header div button {
+    font-size: 1.1em;
+    padding: 5px;
+    background-color: var(--color-brand-200);
+    border-radius: 10px;
+}
+
+header div button:hover {
+    background-color: var(--color-brand-100);
+    transition-duration: 0.5s;
+}
+
+main h2 {
+    font-size: 2.5em;
+    color: var(--color-brand-600);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.345);
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+main h3 {
+    font-size: 2.7em;
+    color: var(--color-brand-700);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.345);
+    margin: 20px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, var(--color-brand-200) 20%, var(--color-brand-100) 80%
+);
+}
+
+.container-categoria {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: 30px;
+   justify-content: center;
+   align-items: center;
+}
+
+.container-categoria button {
+    width: 250px;
+    height: 170px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 30px;
+}
+
+#btn-categoria-chaveiros {
+    background-image: url("../img/botoes/btn-chaveiro.jpg");
+}
+#btn-categoria-pelucias {
+    background-image: url("../img/botoes/btn-pelucias.jpg");
+}
+#btn-categoria-roupas {
+    background-image: url("../img/botoes/btn-roupas.jpg");
+}
+#btn-categoria-papelaria {
+    background-image: url("../img/botoes/btn-papelaria.jpg");
+}
+#btn-categoria-acessorios {
+    background-image: url("../img/botoes/btn-acessorios.jpg");
+}
+
+.container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    margin: 80px;
+}
+
+.cardProduto {
+    padding: 20px;
+    background-color: var(--color-brand-400);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.313);
+}
+
+.cardProduto:hover {
+   transform: scale(1.02);
+   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.313);
+   transition-duration: 0.5s;
+}
+
+.cardProduto img{
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid var(--color-brand-600);
+}
+
+.cardProduto p{
+    color: var(--color-brand-100);
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+.cardProduto button{
+    padding: 10px;
+    background-color: var(--color-brand-700);
+    color: var(--color-brand-100);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.cardProduto button:hover{
+    background-color: var(--color-brand-600);
+    transition-duration: 0.5s;
+}
+
+.carousel-item img {
+  height: 550px;
+  object-fit: cover;
+}
+
+footer {
+    padding: 20px;
+    color: var(--color-brand-100);
+    font-size: 1.3em;
+    background-color: var(--color-brand-600);
+    text-align: center;
+}
