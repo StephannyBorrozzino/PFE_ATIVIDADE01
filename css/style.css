@@ -27,7 +27,8 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 2.9em;
+    margin-right: 20px;
 }
 
 header div {
@@ -38,12 +39,12 @@ header div {
 }
 
 header div p {
-    font-size: 1.7em;
+    font-size: 1.3em;
     margin-right: 20px;
 }
 
-header div button {
-    font-size: 1.1em;
+header .button-finalizarCompra {
+    font-size: 1em;
     padding: 5px;
     background-color: var(--color-brand-200);
     border-radius: 10px;
@@ -71,17 +72,16 @@ main h3 {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 20px;
-    background-image: linear-gradient(to right, var(--color-brand-200) 20%, var(--color-brand-100) 80%
-);
+    background-image: linear-gradient(to right, var(--color-brand-200) 20%, var(--color-brand-100) 80%);
 }
 
 .container-categoria {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   margin: 30px;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-categoria button {
@@ -90,21 +90,31 @@ main h3 {
     border-radius: 10px;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 30px;
+    margin: 10px;
+}
+
+.container-categoria button:hover {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.313);
+    transform: scale(1.02);
+    transition-duration: 0.5s;
 }
 
 #btn-categoria-chaveiros {
     background-image: url("../img/botoes/btn-chaveiro.jpg");
 }
+
 #btn-categoria-pelucias {
     background-image: url("../img/botoes/btn-pelucias.jpg");
 }
+
 #btn-categoria-roupas {
     background-image: url("../img/botoes/btn-roupas.jpg");
 }
+
 #btn-categoria-papelaria {
     background-image: url("../img/botoes/btn-papelaria.jpg");
 }
+
 #btn-categoria-acessorios {
     background-image: url("../img/botoes/btn-acessorios.jpg");
 }
@@ -112,10 +122,9 @@ main h3 {
 .container {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(243px, auto));
     justify-content: center;
-    align-content: center;
-    margin: 80px;
+    margin: 30px auto;
 }
 
 .cardProduto {
@@ -130,24 +139,27 @@ main h3 {
 }
 
 .cardProduto:hover {
-   transform: scale(1.02);
-   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.313);
-   transition-duration: 0.5s;
+    transform: scale(1.02);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.313);
+    transition-duration: 0.5s;
 }
 
-.cardProduto img{
-    width: 300px;
+.cardProduto img {
+    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
     border: 2px solid var(--color-brand-600);
 }
 
-.cardProduto p{
+.cardProduto p {
     color: var(--color-brand-100);
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 10px;
+    max-width: 300px;
+    text-align: center;
 }
 
-.cardProduto button{
+.cardProduto button {
     padding: 10px;
     background-color: var(--color-brand-700);
     color: var(--color-brand-100);
@@ -155,14 +167,45 @@ main h3 {
     border-radius: 10px;
 }
 
-.cardProduto button:hover{
+.cardProduto button:hover {
     background-color: var(--color-brand-600);
     transition-duration: 0.5s;
 }
 
 .carousel-item img {
-  height: 550px;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+
+/* botao voltar para o topo */
+
+#botaoTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#botaoTopo.mostrar {
+    display: flex;
+}
+
+#botaoTopo:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
 }
 
 footer {

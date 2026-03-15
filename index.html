@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <h1>Loja Midnight Geek</h1>
         <div>
+            <i class="bi bi-cart-fill"></i>
             <p>Carrinho: <span class="contadorCart">0</span></p>
-        <button onclick="finalizarCompra()">Finalizar Compra</button>
+            <button onclick="finalizarCompra()" class="button-finalizarCompra">Finalizar Compra</button>
         </div>
     </header>
 
@@ -23,86 +27,278 @@
 
         <div class="container-categoria">
             <a href="#categoria-chaveiros"><button class="btn" id="btn-categoria-chaveiros"></button></a>
-            <button class="btn" id="btn-categoria-pelucias"></button>
-            <button class="btn" id="btn-categoria-roupas"></button>
-            <button class="btn" id="btn-categoria-papelaria"></button>
-            <button class="btn" id="btn-categoria-acessorios"></button>
+            <a href="#categoria-pelucias"><button class="btn" id="btn-categoria-pelucias"></button></a>
+            <a href="#categoria-roupas"><button class="btn" id="btn-categoria-roupas"></button></a>
+            <a href="#categoria-papelaria"><button class="btn" id="btn-categoria-papelaria"></button></a>
+            <a href="#categoria-acessorios"><button class="btn" id="btn-categoria-acessorios"></button></a>
         </div>
 
         <h2>Produtos</h2>
         <div class="container">
             <div class="cardProduto">
-                <img src="img/produtos/caneca-yoshi.jpg" alt="Caneca do Yoshi">
+                <img src="img/produtos/acessorios/caneca-mario-yoshi.jpg" alt="Caneca do Yoshi">
                 <p>Caneca do Yoshi</p>
                 <p>R$ 45,00</p>
                 <button class="botaoAddCart" data-nome="Caneca do Yoshi" data-preco="45.00">Adicionar ao Carrinho</button>
             </div>
             <div class="cardProduto">
-                <img src="img/produtos/pelucia-yoshi.jpg" alt="Caneca do Yoshi">
+                <img src="img/produtos/pelucias/pelucia-mario-yoshi.jpg" alt="Pelucia do Yoshi">
                 <p>Pelucia do Yoshi</p>
                 <p>R$ 60,00</p>
                 <button class="botaoAddCart" data-nome="Pelucia do Yoshi" data-preco="60.00">Adicionar ao Carrinho</button>
             </div>
             <div class="cardProduto">
-                <img src="img/produtos/caderno-tanjiro.jpg" alt="Caneca do Yoshi">
+                <img src="img/produtos/papelaria/caderno-20materias-demonslayer-tanjiro.jpg" alt="Caderno Demon Slayer - Tanjiro - 20 matérias">
                 <p>Caderno Tanjiro - 20 Matérias</p>
                 <p>R$ 63,50</p>
-                <button class="botaoAddCart"  data-nome="Caderno Tanjiro - 20 Matérias" data-preco="63.50">Adicionar ao Carrinho</button>
+                <button class="botaoAddCart" data-nome="Caderno Tanjiro - 20 Matérias" data-preco="63.50">Adicionar ao Carrinho</button>
             </div>
         </div>
 
-<div id="carouselBunners" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="carouselBunners" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselBunners" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselBunners" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselBunners" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselBunners" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
 
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/bunners/o-que-ta-esperando.png" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="img/bunners/30-porcento-chaveiros.png" class="d-block w-100" alt="...">
-    </div>
-  </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/bunners/o-que-ta-esperando.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/bunners/30-porcento-chaveiros.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselBunners" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBunners" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
 
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselBunners" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBunners" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 
-</div>
+        </div>
 
         <section id="categoria-chaveiros">
             <h3>Chaveiros</h3>
 
             <div class="container">
-            <div class="cardProduto">
-                <img src="img/produtos/chaveiro-pelucia-kirby.jpg" alt="Caneca do Yoshi">
-                <p>Chaveiro de Pelucia Kirby</p>
-                <p>R$ 40,90</p>
-                <button class="botaoAddCart" data-nome="Chaveiro de Pelucia Kirby" data-preco="40.90">Adicionar ao Carrinho</button>
+                <div class="cardProduto">
+                    <img src="img/produtos/chaveiros/chaveiro-kirby-kirby-pelucia.jpg" alt="Chaveiros de pelucia do kirby">
+                    <p>Chaveiros de Pelucia Kirby</p>
+                    <p>R$ 40,90</p>
+                    <button class="botaoAddCart" data-nome="Chaveiros de Pelucia Kirby" data-preco="40.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/chaveiros/chaveiro-honkaistarrail-castorice-phainon.jpg" alt="Chaveiros da Castorice e do Phainon">
+                    <p>Chaveiros da Castorice e do Phainon</p>
+                    <p>R$ 49,90</p>
+                    <button class="botaoAddCart" data-nome="Chaveiros da Castorice e do Phainon" data-preco="49.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/chaveiros/chaveiro-kirby-kirby-waddle.jpg" alt="Chaveiro do Kirby e do Waddle">
+                    <p>Chaveiros do Kirby</p>
+                    <p>R$ 34,50</p>
+                    <button class="botaoAddCart" data-nome="Chaveiros do Kirby" data-preco="34.50">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/chaveiros/chaveiro-demonslayer-tanjiro-nezuko-zenitsu-inosuke-tomioka.jpg" alt="Chaveiros do Tanjiro, Nezuko, Zenitsu, Inosuke e Tomioka">
+                    <p>Chaveiros do Tanjiro, Nezuko, Zenitsu, Inosuke e Tomioka</p>
+                    <p>R$ 68,10</p>
+                    <button class="botaoAddCart" data-nome="Chaveiros do Tanjiro, Nezuko, Zenitsu, Inosuke e Tomioka" data-preco="68.10">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/chaveiros/chaveiro-blackbutler-undertaker-sebastian-joker-grell-ciel.jpg" alt="Chaveiros do Undertaker, Sebastian, Joker, Grell e Ciel">
+                    <p>Chaveiros do Undertaker, Sebastian, Joker, Grell e Ciel</p>
+                    <p>R$ 62,00</p>
+                    <button class="botaoAddCart" data-nome="Chaveiros do Undertaker, Sebastian, Joker, Grell e Ciel" data-preco="62.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/chaveiros/chaveiro-jujutsukaisen-yuji-sukuna-gojo-megumi.jpg" alt="Chaveiros do Yuji, Sukuna, Gojo e Megumi">
+                    <p>Chaveiros do Yuji, Sukuna, Gojo e Megumi</p>
+                    <p>R$ 57,90</p>
+                    <button class="botaoAddCart" data-nome="Chaveiros do Yuji, Sukuna, Gojo e Megumi" data-preco="57.90">Adicionar ao Carrinho</button>
+                </div>
             </div>
-            <div class="cardProduto">
-                <img src="img/produtos/chaveiros-castorice-phainon.jpg" alt="Caneca do Yoshi">
-                <p>Chaveiros da Castorice e do Phainon</p>
-                <p>R$ 49,90</p>
-                <button class="botaoAddCart" data-nome="Chaveiros da Castorice e do Phainon" data-preco="49.90">Adicionar ao Carrinho</button>
-            </div>
-            <div class="cardProduto">
-                <img src="img/produtos/chaveiro-kirby.jpg" alt="Caneca do Yoshi">
-                <p>Chaveiros do Kirby</p>
-                <p>R$ 34,50</p>
-                <button class="botaoAddCart" data-nome="Chaveiros do Kirby" data-preco="34.50">Adicionar ao Carrinho</button>
-            </div>
-        </div>
         </section>
+
+        <section id="categoria-pelucias">
+            <h3>Pelucias</h3>
+
+            <div class="container">
+                <div class="cardProduto">
+                    <img src="img/produtos/pelucias/pelucia-duolingo-duolingo.jpg" alt="Pelucia do Duolingo">
+                    <p>Pelucia do Duolingo</p>
+                    <p>R$ 45,00</p>
+                    <button class="botaoAddCart" data-nome="Pelucia do Duolingo" data-preco="45.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/pelucias/pelucia-fnaf-lefty.jpg" alt="Pelucia da Lefty">
+                    <p>Pelucia da Lefty</p>
+                    <p>R$ 47,50</p>
+                    <button class="botaoAddCart" data-nome="Pelucia da Lefty" data-preco="47.50">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/pelucias/pelucia-mario-tartaruga.jpg" alt="Pelucia da Tartaruga do Mario">
+                    <p>Pelucia da Tartaruga do Mario</p>
+                    <p>R$ 40,50</p>
+                    <button class="botaoAddCart" data-nome="Pelucia da Tartaruga do Mario" data-preco="40.50">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/pelucias/pelucia-snoopy-snoopy.jpg" alt="Pelucia do Snoopy">
+                    <p>Pelucia do Snoopy</p>
+                    <p>R$ 46,90</p>
+                    <button class="botaoAddCart" data-nome="Pelucia do Snoopy" data-preco="46.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/pelucias/pelucia-fnaf-glamrock-freddy.jpg" alt="Pelucia do Glamrock Freddy">
+                    <p>Pelucia do Glamrock Freddy</p>
+                    <p>R$ 41,00</p>
+                    <button class="botaoAddCart" data-nome="Pelucia do Glamrock Freddy" data-preco="41.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/pelucias/pelucia-mario-yoshi.jpg" alt="Pelucia do Yoshi">
+                    <p>Pelucia do Yoshi</p>
+                    <p>R$ 60,00</p>
+                    <button class="botaoAddCart" data-nome="Pelucia do Yoshi" data-preco="60.00">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="categoria-roupas">
+            <h3>Roupas</h3>
+
+            <div class="container">
+                <div class="cardProduto">
+                    <img src="img/produtos/roupas/camisa-branca-demonslayer-yoriichi.jpg" alt="Camisa branca do Yoriichi">
+                    <p>Camisa branca do Yoriichi</p>
+                    <p>R$ 54,90</p>
+                    <button class="botaoAddCart" data-nome="Camisa branca do Yoriichi" data-preco="54.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/roupas/camisa-preta-fnaf-be-the-best-of-friends-forever.jpg" alt="Camisa preta do Toy Freddy - Be the best of friends forever">
+                    <p>Camisa preta do Toy Freddy - Be the best of friends forever</p>
+                    <p>R$ 49,90</p>
+                    <button class="botaoAddCart" data-nome="Camisa preta do Toy Freddy - Be the best of friends forever" data-preco="49.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/roupas/moletom-preto-fnaf-shadow-bonnie.jpg" alt="Moletom preto do Shadow Bonnie">
+                    <p>Moletom preto do Shadow Bonnie</p>
+                    <p>R$ 65,00</p>
+                    <button class="botaoAddCart" data-nome="Moletom preto do Shadow Bonnie" data-preco="65.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/roupas/camisa-preta-demonslayer-kokushibo.jpg" alt="Camisa preta do Kokushibo">
+                    <p>Camisa preta do Kokushibo</p>
+                    <p>R$ 56,50</p>
+                    <button class="botaoAddCart" data-nome="Camisa preta do Kokushibo" data-preco="56.50">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/roupas/camisa-branca-fnaf-its-your-time-to-shine.jpg" alt="Camisa branca do Helpy - It's your time to shine">
+                    <p>Camisa branca do Helpy - It's your time to shine</p>
+                    <p>R$ 50,00</p>
+                    <button class="botaoAddCart" data-nome="Camisa branca do Helpy - It's your time to shine" data-preco="50.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/roupas/camisa-branca-fnaf-way-to-go-superstar.jpg" alt="Camisa branca do Glamrock Freddy - Way to go superstar">
+                    <p>Camisa branca do Glamrock Freddy - Way to go superstar</p>
+                    <p>R$ 52,50</p>
+                    <button class="botaoAddCart" data-nome="Camisa branca do Glamrock Freddy - Way to go superstar" data-preco="52.50">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="categoria-papelaria">
+            <h3>Papelaria</h3>
+
+            <div class="container">
+                <div class="cardProduto">
+                    <img src="img/produtos/papelaria/caneta-jujutsukaisen-gojo-yuji-sukuna.jpg" alt="Canetas do Gojo, Yuji e Sukuna">
+                    <p>Canetas do Gojo, Yuji e Sukuna</p>
+                    <p>R$ 30,00</p>
+                    <button class="botaoAddCart" data-nome="Canetas do Gojo, Yuji e Sukuna" data-preco="30.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/papelaria/caderno10materias-honkaistarrail-aventurine.jpg" alt="Caderno Honkai Star Rail - Aventurine - 10 matérias">
+                    <p>Caderno Honkai Star Rail - Aventurine - 10 matérias</p>
+                    <p>R$ 49,90</p>
+                    <button class="botaoAddCart" data-nome="Caderno Honkai Star Rail - Aventurine - 10 matérias" data-preco="49.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/papelaria/caneta-demonslayer-nichirin-tomioka.jpg" alt="Caneta no formato da nichirin do Tomioka">
+                    <p>Caneta no formato da nichirin do Tomioka</p>
+                    <p>R$ 35,00</p>
+                    <button class="botaoAddCart" data-nome="Caneta no formato da nichirin do Tomioka" data-preco="35.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/papelaria/adesivo-genshinimpact-emojis.jpg" alt="Cartela de adesivos de Genshin Impact - Emojis">
+                    <p>Cartela de adesivos de Genshin Impact - Emojis</p>
+                    <p>R$ 44,90</p>
+                    <button class="botaoAddCart" data-nome="Cartela de adesivos de Genshin Impact - Emojis" data-preco="44.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/papelaria/postites-snoopy-snoopy-woodstock.jpg" alt="Conjunto de postites do Snoopy">
+                    <p>Conjunto de postites do Snoopy</p>
+                    <p>R$ 37,90</p>
+                    <button class="botaoAddCart" data-nome="Conjunto de postites do Snoopy" data-preco="37.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/papelaria/caderno-20materias-demonslayer-tanjiro.jpg" alt="Caderno Demon Slayer - Tanjiro - 20 matérias">
+                    <p>Caderno Demon Slayer - Tanjiro - 20 matérias</p>
+                    <p>R$ 63,50</p>
+                    <button class="botaoAddCart" data-nome="Caderno Demon Slayer - Tanjiro - 20 matérias" data-preco="63.50">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="categoria-acessorios">
+            <h3>Acessórios</h3>
+
+            <div class="container">
+                <div class="cardProduto">
+                    <img src="img/produtos/acessorios/caneca-mario-yoshi.jpg" alt="Caneca do Yoshi">
+                    <p>Caneca do Yoshi</p>
+                    <p>R$ 45,00</p>
+                    <button class="botaoAddCart" data-nome="Caneca do Yoshi" data-preco="45.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/acessorios/botton-fnaf-security-breach.jpg" alt="Bottons de Fnaf Security Breach">
+                    <p>Bottons de Fnaf Security Breach</p>
+                    <p>R$ 40,00</p>
+                    <button class="botaoAddCart" data-nome="Bottons de Fnaf Security Breach" data-preco="40.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/acessorios/capinha-celular-duolingo-duolingo-max.jpg" alt="Capinha de celular preta do Duolingo Max">
+                    <p>Capinha de celular preta do Duolingo Max</p>
+                    <p>R$ 30,50</p>
+                    <button class="botaoAddCart" data-nome="Capinha de celular preta do Duolingo Max" data-preco="30.50">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/acessorios/caneca-naruto-naruto-itachi.jpg" alt="Caneca do Naruto e Itachi">
+                    <p>Caneca do Naruto e Itachi</p>
+                    <p>R$ 44,90</p>
+                    <button class="botaoAddCart" data-nome="Caneca do Naruto e Itachi" data-preco="44.90">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/acessorios/capinha-celular-blackbutler-ciel.jpg" alt="Capinha de celular de Black Butler - Ciel">
+                    <p>Capinha de celular de Black Butler - Ciel</p>
+                    <p>R$ 35,00</p>
+                    <button class="botaoAddCart" data-nome="Chaveiros da Castorice e do Phainon" data-preco="35.00">Adicionar ao Carrinho</button>
+                </div>
+                <div class="cardProduto">
+                    <img src="img/produtos/acessorios/garrafa-deathnote-death-note.jpg" alt="Garrafa de Death Note">
+                    <p>Garrafa de Death Note</p>
+                    <p>R$ 43,50</p>
+                    <button class="botaoAddCart" data-nome="Garrafa de Death Note" data-preco="43.50">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <button id="botaoTopo" title="Voltar ao topo"><i class="bi bi-arrow-up-circle"></i></button>
 
     </main>
 
@@ -112,6 +308,7 @@
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
 </body>
+</body>
+
 </html>
